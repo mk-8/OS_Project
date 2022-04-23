@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Banker's Algorithm</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="newJs.js"></script>
+		    <link rel="stylesheet" href="Bankers.css">
+
+
+
+    </head>
+    <body>
+
+        <section class="sub-header">
+			<nav>
+			  <div class="nav-links" id="navLinks">
+				<!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
+				<ul>
+				  <li><a href="../home.html">HOME</a></li>
+				  <li><a href="">ALGORITHMS</a>
+					<div class="submenu-1">
+					  <ul>
+						<li><a href="../Peterson's Algorithm.html">Peterson's Algorithm</a></li>
+						<li><a href="../Producer-Consumer Algorithm.html">Producer-Consumer </a></li>
+						<li><a href="../Banker's Algorithm.html">Banker's Algorithm</a></li>
+						<li><a href="../Dining Philosopher.html">Dining Philosopher </a></li>
+					  </ul>
+					</div>
+				  </li>
+				  <li><a href="../about.html">ABOUT</a></li>
+				</ul>
+			  </div>
+			  <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+			</nav>
+			<section>
+
+			  <div class="content">
+				<h2 style="font-family: 'Poppins', sans-serif;">Banker's Algorithm</h2>
+				<h2 style="font-family: 'Poppins', sans-serif;">Banker's Algorithm</h2>
+			  </div>
+			</section>
+
+		  </section>
+
+		  <div class="def">
+			<h4 style="font-family: 'Poppins', sans-serif;" >Try it below!</h4>
+
+		  </div>
+
+        <div class="container-fluid"><br/>
+            <p>Please insert number to calculate deadlock</p>
+            <table class="table text-center table-bordered order-list" id="tableId">
+                <thead>
+                    <tr>
+                        <th colspan="1">Process</th>
+                        <th colspan="3">Allocation</th>
+                        <th colspan="3">Max</th>
+                        <th colspan="3">Available</th>
+                        <th colspan="3">Need</th>
+                    </tr>
+                    <tr>
+                        <th><div class="btn-group">
+                                <input type="button" class="btn btn-primary btn-sm" id="addrow" value="+" />
+                                <input type="button" class="ibtnDel btn btn-danger btn-sm" value="-" />
+                        </div></th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                    <tr>
+                        <td>P0</td>
+                        <td><input id="0Allo0" class="form-control text-center" name="Allo0"/></td>
+                        <td><input id="0Allo1" class="form-control text-center" name="Allo1"/></td>
+                        <td><input id="0Allo2" class="form-control text-center" name="Allo2"/></td>
+                        <td><input id="0Max0" class="form-control text-center" name="Max0"/></td>
+                        <td><input id="0Max1" class="form-control text-center" name="Max1"/></td>
+                        <td><input id="0Max2" class="form-control text-center" name="Max2"/></td>
+                        <td><input id="0Avai0" class="form-control text-center" name="Avai0"/></td>
+                        <td><input id="0Avai1" class="form-control text-center" name="Avai1"/></td>
+                        <td><input id="0Avai2" class="form-control text-center" name="Avai2"/></td>
+                        <td><input id="0Need0" class="form-control text-center" name="Need0" disabled/></td>
+                        <td><input id="0Need1" class="form-control text-center" name="Need1" disabled/></td>
+                        <td><input id="0Need2" class="form-control text-center" name="Need2" disabled/></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        <td><input id="Avai0" class="form-control text-center" name="Avai0" disabled/></td>
+                        <td><input id="Avai1" class="form-control text-center" name="Avai1" disabled/></td>
+                        <td><input id="Avai2" class="form-control text-center" name="Avai2" disabled/></td>
+                        <td></td><td></td><td></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><input id="cal" onclick="calculate()" type="button" class="btn btn-block btn-success pull-rigth" value="Calculate"/></div>
+                <div class="col-md-4"></div>
+            </div>
+            <div>
+                <label>Result:</label><input type="text" class="form-control" id="result"/>
+            </div>
+            <script src="Bankers.js"></script>
+        </div>
+    </body>
+</html>

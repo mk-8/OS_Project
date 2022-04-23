@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Peterson's Algorithm</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="Peterson.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+        <script src="https://kit.fontawesome.com/f6295bb103.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <section class="sub-header">
+			<nav>
+			  <div class="nav-links" id="navLinks">
+				<!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
+				<ul>
+				  <li><a href="../index.html">HOME</a></li>
+				  <li><a href="">ALGORITHMS</a>
+					<div class="submenu-1">
+					  <ul>
+						<li><a href="../Peterson's Algorithm.html">Peterson's Algorithm</a></li>
+						<li><a href="../Producer-Consumer Algorithm.html">Producer-Consumer </a></li>
+						<li><a href="../Banker's Algorithm.html">Banker's Algorithm</a></li>
+						<li><a href="../Dining Philosopher.html">Dining Philosopher </a></li>
+					  </ul>
+					</div>
+				  </li>
+				  <li><a href="../about.html">ABOUT</a></li>
+				</ul>
+			  </div>
+			  <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+			</nav>
+			<section>
+
+			  <div class="content">
+				<h2 style="font-family: 'Poppins', sans-serif;">Peterson's Algorithm</h2>
+				<h2 style="font-family: 'Poppins', sans-serif;">Peterson's Algorithm</h2>
+			  </div>
+			</section>
+
+		  </section>
+
+		  <div class="def">
+			<h4 style="font-family: 'Poppins', sans-serif;" >Try it below!</h4>
+
+		  </div>
+
+        <!--table-->
+        <div class="contact100-form-title pt-3 pb-0" id = 'turn_state'></div>
+        <div class="contact100-form-title pt-3 pb-0" id="flag1"></div>
+        <div class="contact100-form-title pt-3 pb-0" id="flag2"></div>
+
+
+
+
+        <div class="container-fluid pt-3 pb-0" id = 'lock_state'>
+            <section class='border border-black'>
+                <div class="contact100-form-title pt-3 pb-0" id = 'entry_head'>Entry state:</div>
+                <div class = 'text-center pl-4' id='entry'>
+                    <button id = '1' onclick="critical_state(this.id)">P1</button>
+                    <button id = '2' onclick="critical_state(this.id)">P2</button>
+                </div>
+            </section>
+            <section class='border border-black '>
+                <div class="contact100-form-title pt-3 pb-0" id = 'critical_head'>Critical state:</div>
+                <div class = 'text-center pl-4' id='critical'></div>
+            </section>
+            <section class='border border-black '>
+                <div class="contact100-form-title pt-3 pb-0" id = 'exit_head'>Exit State:</div>
+                <div class = 'text-center pl-4' id='exit'></div>
+            </section>
+            <section>
+                <div class="contact100-form-title pt-3 pb-0"></div>
+                <div class = 'continer pl-4'></div>
+            </section>
+        </div>
+        <!--button-->
+
+        <div class = 'continer pl-4' id='process_button'>
+
+        </div>
+
+        <script src="Peterson.js"></script>
+
+    </body>
+</html>

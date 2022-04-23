@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Concurrency & DeadLock </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <section class="header">
+
+    <nav>
+      <div class="nav-links " id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()">x</i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="">ALGORITHMS</a>
+            <div class="submenu-1">
+              <ul>
+                <li><a href="Peterson's Algorithm.html">Peterson's Algorithm</a></li>
+                <li><a href="Producer-Consumer Algorithm.html">Producer-Consumer </a></li>
+                <li><a href="Banker's Algorithm.html">Banker's Algorithm</a></li>
+                <li><a href="Dining Philosopher.html">Dining Philosopher </a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"><img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png"/></i>
+    </nav>
+    <div class="text-box ">
+
+      <div class="container">
+        <h3 class="title">
+          <span class="title-word title-word-1">Concurrency</span>
+          <span class="title-word title-word-2">&</span>
+          <span class="title-word title-word-3">DeadLock</span>
+        </h3>
+      </div>
+
+      <p>Deadlock describes a situation where two or more threads are blocked forever, waiting for each other.<br>
+        Deadlock occurs when multiple threads need the same locks but obtain them in different order.
+      </p>
+      <div>
+        <a href="#know-more" class="hero-btn red-btn">Know more</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="def">
+    <p>
+      Deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. Consider an example when two trains are coming toward each other on the
+      same track and there is only one track, none of the trains can move once they are in front of each other. Concurrency is the execution of the multiple instruction sequences at the same time.
+    </p>
+  </div>
+
+  <section id="know-more" class="course context">
+    <div class="container">
+
+    </div>
+    <h1>Concurrency & DeadLock</h1>
+    <div class="course-row row">
+      <div class="course-column col-sm-12 col-md-6 col-lg-3">
+        <h2>Concurrency</h2>
+        <p style="padding-bottom: 10%;">Concurrency is the execution of the multiple instruction sequences at the same time. It
+          happens in the operating system when there are several process threads running in parallel.
+          The running process threads always communicate
+          with each other through shared memory or message passing.</p>
+        <a href="Peterson's Algorithm.html" class="hero-btn red-btn">Peterson's Algorithm</a>
+        <a href="Producer-Consumer Algorithm.html" class="hero-btn red-btn">Producer-Consumer</a>
+      </div>
+
+      <div class="course-column col-sm-12 col-md-6 col-lg-3">
+        <h2>DeadLock</h2>
+        <p style="padding-bottom: 10%;">In concurrent computing, deadlock is any situation in which no member of some group of entities can proceed because each waits for another member, including itself, to take action, such as sending a message
+          or, more commonly, releasing a lock.Deadlocks are a common problem in multiprocessing systems, parallel computing, and distributed systems.</p>
+        <a href="Banker's Algorithm.html" class="hero-btn red-btn ">Banker's Algorithm</a>
+      </div>
+
+      <div class="course-column col-sm-12 col-md-6 col-lg-3">
+        <h2>Dining Philosopher</h2>
+        <p style="padding-bottom: 10%;">The dining philosopher's problem is the classical problem of synchronization which says that Five philosophers are sitting around a circular table and their job is to think and eat alternatively. A bowl of noodles is placed at the center of the table along with five chopsticks for each of the philosophers. </p>
+        <a href="Dining Philosopher.html" class="hero-btn red-btn">Dining Philosopher</a>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <h4>About Us</h4>
+    <h6>Created By G1-Team4</h6>
+
+
+
+  </section>
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+</body>
+
+</html>

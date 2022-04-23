@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Producer And Consumer</title>
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="ProducerandConsumer.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+        <script src="https://kit.fontawesome.com/f6295bb103.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!-- <h2 style="margin-top: 19.92px;"><a href="../Producer-Consumer Algorithm.html" style="text-decoration: none;"><i class="fa-solid fa-angles-left" style="font-size: 1.8rem;color: black;margin-left: 8px;"></i></a></h2> -->
+        <section class="sub-header">
+			<nav>
+			  <div class="nav-links" id="navLinks">
+				<!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
+				<ul>
+				  <li><a href="../index.html">HOME</a></li>
+				  <li><a href="">ALGORITHMS</a>
+					<div class="submenu-1">
+					  <ul>
+						<li><a href="../Peterson's Algorithm.html">Peterson's Algorithm</a></li>
+						<li><a href="../Producer-Consumer Algorithm.html">Producer-Consumer </a></li>
+						<li><a href="../Banker's Algorithm.html">Banker's Algorithm</a></li>
+						<li><a href="../Dining Philosopher.html">Dining Philosopher </a></li>
+					  </ul>
+					</div>
+				  </li>
+				  <li><a href="../about.html">ABOUT</a></li>
+				</ul>
+			  </div>
+			  <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+			</nav>
+			<section>
+
+			  <div class="content">
+				<h2 style="font-family: 'Poppins', sans-serif;">Producer-Consumer</h2>
+				<h2 style="font-family: 'Poppins', sans-serif;">Producer-Consumer</h2>
+			  </div>
+			</section>
+
+		  </section>
+
+		  <div class="def">
+			<h4 style="font-family: 'Poppins', sans-serif;" >Try it below!</h4>
+
+		  </div>
+        <!-- <h1>Producer And Consumer</h1> -->
+
+
+        <!--input-->
+        <div class="container mt-5 pt-5" id='process_input'>
+            <label for="process">TOTAL SPACE:</label>
+                <div >
+                    <input class="input100" type="number" id="space" placeholder="number of total space">
+
+                </div>
+        </div>
+        <div class="container mt-2 pt-2" id='process_input'>
+            <label for="process">PRODUCE:</label>
+                <div>
+                    <input class="input100" type="number" id="produced" placeholder="total items to be produced">
+
+                </div>
+        </div>
+        <div class="container mt-2 pt-2" id='process_input'>
+            <label for="process">CONSUME:</label>
+                <div class="wrap-input100">
+                    <input class="input100" type="number" id="consumed" placeholder="total items to be consumed">
+                </div>
+        </div>
+        <!--submit-->
+        <div class = "text-center pt-2 mt-2">
+            <button type="button" id="producer" onclick='produce()' class="btn btn-success btn-lg mr-5 sixth">Producer</button>
+            <button type="button" id="consumer" onclick='consume()' class="btn btn-danger btn-lg mr-5 fifth pl-2">Consumer</button>
+            <a href = "ProducerandConsumer.html"><button type="button" id="reset" class="btn btn-dark btn-lg third pl-2">Reset</button></a>
+        </div>
+        <!--table-->
+        <div class = 'continer pl-4' id='toAdd'></div>
+        <!--button-->
+        <div class = 'continer pl-4' id='process_button'>
+        </div>
+        <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+        <script src="ProducerandConsumer.js"></script>
+    </body>
+</html>

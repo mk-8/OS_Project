@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Peterson's Algorithm </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Algo.css">
+  <script src="Algo.js"></script>
+
+</head>
+
+<body>
+
+  <section class="sub-header">
+    <nav>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="">ALGORITHMS</a>
+            <div class="submenu-1">
+              <ul>
+                <li><a href="Peterson's Algorith.html">Peterson's Algorithm</a></li>
+                <li><a href="Producer-Consumer Algorithm.html">Producer-Consumer </a></li>
+                <li><a href="Banker's Algorithm.html">Banker's Algorithm</a></li>
+                <li><a href="Dining Philosopher.html">Dining Philosopher </a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <section>
+
+      <div class="content">
+        <h2>Peterson</h2>
+        <h2>Peterson</h2>
+      </div>
+    </section>
+
+  </section>
+
+
+  <div class="def">
+    <p>
+      Peterson’s solution provides a good algorithmic description of solving the critical-section problem and illustrates some of the complexities involved in designing software that addresses the requirements of mutual exclusion, progress, and
+      bounded waiting. Peterson's algorithm is considered a standard low-level algorithm for two-thread mutual exclusion.
+    </p>
+
+  </div>
+
+  <div class="exp context">
+
+    <h2>Critical Section Problem :</h2>
+    <p>
+      We begin our consideration of process synchronization by discussing the so called critical-section problem. Consider a system consisting of n processes
+      {P0, P1, ..., Pn−1}. Each process has a segment of code, called a critical section,
+      in which the process may be changing common variables, updating a table,
+      writing a file, and so on
+    </p>
+    <br>
+    <h1>Criteria for Peterson's Algorithm:</h1>
+    <br>
+    <h2>1. Mutual Exclution</h2>
+    <p>
+      The method provides mutual exclusion for sure. In entry section, the while condition involves the criteria for two variables therefore a process cannot enter in the critical section until the other process is interested and the process is the
+      last one to update turn variable.
+    </p>
+    <br>
+    <h2>2. Progress</h2>
+    <p>
+      Progress is defined as the following: if no process is executing in its critical section and some processes wish to enter their critical sections, then only those processes that are not executing in their remainder sections can participate in
+      making the decision as to which process will enter its critical section next.
+    </p>
+    <br>
+    <h2>3. Bounded waiting</h2>
+    <p>
+      The interested variable mechanism failed because it was not providing bounded waiting. However, in Peterson solution, A deadlock can never happen because the process which first sets the turn variable will enter in the critical section for
+      sure. Therefore, if a process is preempted after executing line number 4 of the entry section then it will definitely get into the critical section in its next chance.
+    </p>
+    <br>
+    <h2>4. Portability</h2>
+    <p>
+      This is the complete software solution and therefore it is portable on every hardware.
+    </p>
+    <br>
+    
+  </div>
+
+  <div>
+    <a href="A/Peterson.html" class="hero-btn red-btn">Execute</a>
+  </div>
+  </section>
+
+
+
+
+
+</body>
+
+</html>

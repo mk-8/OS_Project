@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Producer-Consumer </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Algo.css">
+  <script src="Algo.js"></script>
+
+</head>
+
+<body>
+
+  <section class="sub-header">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="">ALGORITHMS</a>
+            <div class="submenu-1">
+              <ul>
+                <li><a href="Peterson's Algorithm.html">Peterson's Algorithm</a></li>
+                <li><a href="Producer-Consumer Algorithm.html">Producer-Consumer </a></li>
+                <li><a href="Banker's Algorithm.html">Banker's Algorithm</a></li>
+                <li><a href="Dining Philosopher.html">Dining Philosopher </a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <section>
+
+      <div class="content">
+        <h2>Producer-Consumer</h2>
+        <h2>Producer-Consumer</h2>
+      </div>
+    </section>
+
+  </section>
+
+
+  <div class="def">
+    <p>
+      The Producer-Consumer problem is a classical multi-process synchronization problem, that is we are trying to achieve synchronization between more than one process. There is one Producer in the producer-consumer problem, Producer is producing
+      some items, whereas there is one Consumer that is consuming the items produced by the Producer.
+    </p>
+
+  </div>
+
+  <div class="exp context">
+    <h1>Analysis of Producer-Consumer Problem :</h1>
+    <p>
+      In computing, the producer-consumer problem (also known as the bounded-buffer problem) is a classic example of a multi-process synchronization problem. The problem describes two processes, the producer and the consumer, which share a common,
+      fixed-size buffer used as a queue. The producer’s job is to generate data, put it into the buffer, and start again. At the same time, the consumer is consuming the data (i.e. removing it from the buffer), one piece at a time.
+    </p>
+    <br>
+    <h1>Problem :</h1>
+    <p>
+      We have a buffer of fixed size. A producer can produce an item and can place in the buffer. A consumer can pick items and can consume them. We need to ensure that when a producer is placing an item in the buffer, then at the same time consumer
+      should not consume any item. In this problem, buffer is the critical section.
+    </p>
+    <br>
+    <h1>Solution :</h1>
+    <p>
+      The producer is to either go to sleep or discard data if the buffer is full. The next time the consumer removes an item from the buffer, it notifies the producer, who starts to fill the buffer again. In the same way, the consumer can go to
+      sleep if it finds the buffer to be empty. The next time the producer puts data into the buffer, it wakes up the sleeping consumer. An inadequate solution could result in a deadlock where both processes are waiting to be awakened.
+    </p>
+    <br>
+    
+
+  </div>
+
+
+
+
+  <div>
+    <a href="A/ProducerandConsumer.html" class="hero-btn red-btn">Execute</a>
+  </div>
+
+  </section>
+
+
+</body>
+
+</html>
